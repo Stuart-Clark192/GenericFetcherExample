@@ -119,18 +119,18 @@
 		1721F2BD25445D0F0042CC94 /* GenericFetcherExample */ = {
 			isa = PBXGroup;
 			children = (
-				1721F333254889B70042CC94 /* Generic Worker */,
-				1721F3322548878E0042CC94 /* Views */,
-				1721F32F2548872D0042CC94 /* ViewModel */,
 				1721F2EF254460480042CC94 /* App Setup */,
 				1721F2C425445D0F0042CC94 /* Assets.xcassets */,
 				1721F324254886270042CC94 /* Data Models */,
 				1721F2F0254460580042CC94 /* Extensions */,
+				1721F333254889B70042CC94 /* Generic Worker */,
 				1721F2CC25445D0F0042CC94 /* Info.plist */,
 				1721F2C925445D0F0042CC94 /* LaunchScreen.storyboard */,
 				1721F327254886540042CC94 /* Local test session */,
 				1721F2C625445D0F0042CC94 /* Preview Content */,
 				1721F2F3254460900042CC94 /* View Modifiers */,
+				1721F32F2548872D0042CC94 /* ViewModel */,
+				1721F3322548878E0042CC94 /* Views */,
 			);
 			path = GenericFetcherExample;
 			sourceTree = "<group>";
