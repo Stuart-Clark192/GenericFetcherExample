@@ -9,35 +9,40 @@ import SwiftUI
 
 struct UserView: View {
     
-    @ObservedObject var viewModel: UserViewModel
+    @StateObject var viewModel: UserViewModel
     
     var body: some View {
-        Group {
-            switch viewModel.viewData.viewState {
-            case .loading:
-                Text("Loading")
-            case .data:
-                List {
-                    ForEach(viewModel.viewData.users) { user in
-                        Text(user.name)
+        NavigationView {
+            Group {
+                switch viewModel.viewData.viewState {
+                case .loading:
+                    Text("Loading")
+                case .data:
+                    List {
+                        ForEach(viewModel.viewData.users) { user in
+                            NavigationLink(destination: PostView(viewModel: PostViewModel(with: user.id) )) {
+                                Text(user.name)
+                            }
+                        }
                     }
+                case .noData:
+                    Text("No data to display")
+                case .error:
+                    Text("Data error")
                 }
-            case .noData:
-                Text("No data to display")
-            case .error:
-                Text("Data error")
             }
         }
         .onAppear {
             viewModel.loadUsers()
         }
+        
     }
 }
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let viewModel = UserViewModel(using: URLTestSession.testSession())
+        let viewModel = UserViewModel()
         return UserView(viewModel: viewModel)
     }
 }

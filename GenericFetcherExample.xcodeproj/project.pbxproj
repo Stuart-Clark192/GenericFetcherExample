@@ -25,6 +25,12 @@
 		1721F3392548900E0042CC94 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721F3382548900E0042CC94 /* UserViewModelTests.swift */; };
 		1721F33D254890A00042CC94 /* XCTestCase+PublisherValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721F33C254890A00042CC94 /* XCTestCase+PublisherValidation.swift */; };
 		1721F33F254890D90042CC94 /* GenericWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721F33E254890D90042CC94 /* GenericWorkerTests.swift */; };
+		1721F34125495B030042CC94 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721F34025495B030042CC94 /* Post.swift */; };
+		1721F34325495C680042CC94 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721F34225495C680042CC94 /* PostView.swift */; };
+		1721F34525495CC70042CC94 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721F34425495CC70042CC94 /* PostViewModel.swift */; };
+		1721F34925495E4F0042CC94 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721F34825495E4F0042CC94 /* ViewState.swift */; };
+		1779EB242549CD3900B73370 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779EB232549CD3900B73370 /* AppSession.swift */; };
+		1779EB262549CFDD00B73370 /* UIApplicationDelegate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779EB252549CFDD00B73370 /* UIApplicationDelegate+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		1721F3382548900E0042CC94 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		1721F33C254890A00042CC94 /* XCTestCase+PublisherValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+PublisherValidation.swift"; sourceTree = "<group>"; };
 		1721F33E254890D90042CC94 /* GenericWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWorkerTests.swift; sourceTree = "<group>"; };
+		1721F34025495B030042CC94 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1721F34225495C680042CC94 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		1721F34425495CC70042CC94 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		1721F34825495E4F0042CC94 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		1779EB232549CD3900B73370 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		1779EB252549CFDD00B73370 /* UIApplicationDelegate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicationDelegate+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,7 @@
 		1721F2BD25445D0F0042CC94 /* GenericFetcherExample */ = {
 			isa = PBXGroup;
 			children = (
+				1721F34625495E300042CC94 /* Enums */,
 				1721F2EF254460480042CC94 /* App Setup */,
 				1721F2C425445D0F0042CC94 /* Assets.xcassets */,
 				1721F324254886270042CC94 /* Data Models */,
@@ -168,6 +181,7 @@
 			children = (
 				1721F2BE25445D0F0042CC94 /* AppDelegate.swift */,
 				1721F2C025445D0F0042CC94 /* SceneDelegate.swift */,
+				1779EB232549CD3900B73370 /* AppSession.swift */,
 			);
 			path = "App Setup";
 			sourceTree = "<group>";
@@ -176,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				1721F2F1254460750042CC94 /* View+Extensions.swift */,
+				1779EB252549CFDD00B73370 /* UIApplicationDelegate+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				1721F325254886390042CC94 /* User.swift */,
+				1721F34025495B030042CC94 /* Post.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -218,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				1721F3302548874D0042CC94 /* UserViewModel.swift */,
+				1721F34425495CC70042CC94 /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -226,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				1721F2C225445D0F0042CC94 /* UserView.swift */,
+				1721F34225495C680042CC94 /* PostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +278,14 @@
 				1721F33C254890A00042CC94 /* XCTestCase+PublisherValidation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1721F34625495E300042CC94 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1721F34825495E4F0042CC94 /* ViewState.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,15 +419,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1721F2F5254460C30042CC94 /* showView.swift in Sources */,
+				1779EB242549CD3900B73370 /* AppSession.swift in Sources */,
 				1721F32E254886FC0042CC94 /* URLProtocolMock.swift in Sources */,
+				1721F34925495E4F0042CC94 /* ViewState.swift in Sources */,
 				1721F2BF25445D0F0042CC94 /* AppDelegate.swift in Sources */,
+				1721F34125495B030042CC94 /* Post.swift in Sources */,
 				1721F336254889E20042CC94 /* GenericWorker.swift in Sources */,
 				1721F3312548874D0042CC94 /* UserViewModel.swift in Sources */,
+				1779EB262549CFDD00B73370 /* UIApplicationDelegate+Extensions.swift in Sources */,
 				1721F326254886390042CC94 /* User.swift in Sources */,
 				1721F32A254886BD0042CC94 /* MockResponses.swift in Sources */,
+				1721F34525495CC70042CC94 /* PostViewModel.swift in Sources */,
 				1721F2C125445D0F0042CC94 /* SceneDelegate.swift in Sources */,
 				1721F2F2254460750042CC94 /* View+Extensions.swift in Sources */,
 				1721F32C254886D60042CC94 /* URLTestSession.swift in Sources */,
+				1721F34325495C680042CC94 /* PostView.swift in Sources */,
 				1721F2C325445D0F0042CC94 /* UserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,7 +28,7 @@ class UserViewModelTests: XCTestCase {
         URLProtocolMock.response = MockResponses.validResponse
         let expectation = self.expectation(description: #function)
         
-        let testSub2: AnyPublisher<ViewModelPublished, Never> = sut.$viewData.eraseToAnyPublisher()
+        let testSub2: AnyPublisher<UserViewModelPublished, Never> = sut.$viewData.eraseToAnyPublisher()
         stateChanges.removeAll()
         
         cancellationToken = testSub2
@@ -53,7 +53,7 @@ class UserViewModelTests: XCTestCase {
         URLProtocolMock.response = MockResponses.urlNotFoundResponse
         let expectation = self.expectation(description: #function)
         
-        let testSub2: AnyPublisher<ViewModelPublished, Never> = sut.$viewData.eraseToAnyPublisher()
+        let testSub2: AnyPublisher<UserViewModelPublished, Never> = sut.$viewData.eraseToAnyPublisher()
         stateChanges.removeAll()
         
         cancellationToken = testSub2
