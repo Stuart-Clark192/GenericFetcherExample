@@ -34,7 +34,6 @@ class UserViewModel: ObservableObject {
         viewData.viewState = .loading
         
         cancellationToken = request
-            .print()
             .receive(on: DispatchQueue.main) // We want to receive this on the main queue so we can update
             .sink(receiveCompletion: { [weak self] completion in
                 switch completion {

@@ -10,10 +10,13 @@ import Foundation
 struct URLTestSession {
     static func testSession() -> URLSession {
         
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return URLSession.shared }
-        let testData = UserTestData.usersDataJSON.data(using: .utf8)!
+        guard let userURL = URL(string: "https://jsonplaceholder.typicode.com/users") else { return URLSession.shared }
+        let userTestData = UserTestData.usersDataJSON.data(using: .utf8)!
         
-        URLProtocolMock.testURLs = [url: testData]
+        guard let postURL = URL(string: "https://jsonplaceholder.typicode.com/posts?userId=1") else { return URLSession.shared }
+        let postTestData = PostTestData.postDataJSON.data(using: .utf8)!
+        
+        URLProtocolMock.testURLs = [userURL: userTestData, postURL: postTestData]
         
         let config = URLSessionConfiguration.ephemeral
         config.protocolClasses = [URLProtocolMock.self]

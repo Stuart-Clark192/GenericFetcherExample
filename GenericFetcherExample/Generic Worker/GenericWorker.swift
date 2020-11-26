@@ -56,8 +56,6 @@ struct GenericWorker: Fetcher {
                     throw APIError.unknown
                 }
                 
-                print(httpResponse.statusCode)
-                
                 guard 200..<300 ~= httpResponse.statusCode else {
                     throw APIError.unknown
                 }
